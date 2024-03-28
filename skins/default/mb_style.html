@@ -1,0 +1,55 @@
+{@ 
+	$wi = $widget_info;
+	$no = rand(1111111,9999999);
+}
+<load target="css/style.css" />
+<load target="js/jquery.flexslider-min.js" />
+
+<style>
+	#site-box{$no} .slider-holder { background:url({$tpl_path}images/slider.png) no-repeat 0 0; }
+	#site-box{$no} .slider-holder span.left { background:url({$tpl_path}images/left.png) no-repeat 0 0; }
+	#site-box{$no} .slider-holder span.right { background:url({$tpl_path}images/right.png) no-repeat 0 0; }
+	.flex-direction-nav li a { background:url({$tpl_path}images/slider-arr.png) no-repeat 0 0; }
+	.flex-control-nav li a { background:url({$tpl_path}images/control-nav.png) no-repeat 1px 0; }
+
+	#site-box{$no} .universal-h2 { color:{$wi->title_font_color}; font-size:{$wi->top_title_size}; }
+	#site-box{$no} .big-slider { background-color:{$wi->back_color}; }
+	#site-box{$no} .big-slider ul.slides .slide-cnt a { color:{$wi->title_color}; font-size:{$wi->title_size}; }
+	#site-box{$no} .big-slider ul.slides .slide-cnt .summary a { color:{$wi->sum_font_color}; font-size:{$wi->sum_font_size}; <!--@if($wi->content_hl_s == 'Y')-->-webkit-line-clamp:{$wi->content_h_n}; height:{$wi->content_l_h*$wi->content_h_n}em;<!--@end--> line-height:{$wi->content_l_h}em; }
+	#site-box{$no} .slides img { -webkit-transform:scale(0.9); transform:scale(0.9); -webkit-transition:.3s ease-in-out; transition:.3s ease-in-out; }
+	#site-box{$no} .slides:hover img { -webkit-transform:scale(1.0); transform:scale(1.0);}
+
+	@media (max-width:1079px) {
+		#site-box{$no} { width:100%; }
+		#site-box{$no} .universal-h2 { font-size:18px }
+		#site-box{$no} .slider-holder { background:url() no-repeat 0 0; }
+		#site-box{$no} .slider-holder span.left { background:url() no-repeat 0 0; }
+		#site-box{$no} .slider-holder span.right { background:url() no-repeat 0 0; }
+		.flex-direction-nav li a { background:url() no-repeat 0 0; }
+		.flex-control-nav li a { background:url({$tpl_path}images/control-nav.png) no-repeat 1px 0; }
+
+		#site-box{$no} .slider-holder { margin:0 auto; width:90%; height:100%; padding:0 10px; background-color:#fff; opacity: .9; filter:alpha(opacity=90); border-radius:10px; }
+		#site-box{$no} .big-slider { width:100%; height:110px; }
+		#site-box{$no} .big-slider ul.slides li { position:relative; width:100%; height:100%; }
+		#site-box{$no} .big-slider ul.slides li a img { width:100px; height:100px; }
+		#site-box{$no} .big-slider ul.slides .extra,
+		#site-box{$no} .big-slider ul.slides .slide-cnt .summary a { display:none; }
+		#site-box{$no} .big-slider ul.slides .slide-cnt a { color:#000; font-size:16px; line-height:25px; padding-bottom:0px; }
+	}
+</style>
+
+<script>
+	$(window).load(function() {
+		$('.big-slider').flexslider({
+			animation:"slide",
+			slideshow: <!--@if($wi->auto == '')-->true<!--@else-->false<!--@end-->,
+			pauseOnHover: <!--@if($wi->pause == '')-->true<!--@else-->false<!--@end-->,
+			randomize: <!--@if($wi->rand == '')-->false<!--@else-->true<!--@end-->,
+			controlsContainer:".slider-holder",
+			slideshowSpeed:{$wi->speed},
+			directionNav:<!--@if($wi->arrow == '')-->true<!--@else-->false<!--@end-->,
+			controlNav:<!--@if($wi->dots == '')-->true<!--@else-->false<!--@end-->,
+			animationDuration:900
+		});
+	});
+</script>

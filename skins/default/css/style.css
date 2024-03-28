@@ -1,0 +1,32 @@
+.left, .alignleft { float:left; display:inline; }
+.right, .alignright { float:right; display:inline; }
+.universal-h2 { text-align:center; margin-bottom:5px; padding:0; }
+
+.slider-holder { margin:0 auto; width:922px; height:330px; padding:60px 70px; overflow:hidden; position:relative; z-index:5; -webkit-box-sizing:content-box; -moz-box-sizing:content-box; box-sizing:content-box; }
+.big-slider { width:922px; height:330px; overflow:visible; position:static; padding-top:10px; }
+.big-slider ul.slides { position:relative; list-style:none; list-style-position:outside; overflow:visible; }
+.big-slider ul.slides li { position:relative; width:922px; height:330px; float:left;  }
+.big-slider ul.slides .slide-cnt a { font-size:30px; color:#ff9031; font-weight:normal; line-height:40px; padding-bottom:4px; }
+.big-slider ul.slides .slide-cnt .summary a { color:#000; overflow:hidden; text-overflow:ellipsis; -webkit-box-orient:vertical; word-wrap:break-word; display:-webkit-box; }
+.big-slider ul.slides .slide-cnt .regdate { display:block; margin:5px 0 15px; font-size:16px; color:#c18f59; }
+.big-slider ul.slides .extra { position:absolute; top:290px; right:5px; }
+.big-slider ul.slides li a img { box-shadow:0 3px 5px rgba(0,0,0,.2); }
+
+.slider-holder span.left { width:21px; height:130px; position:absolute; left:55px; top:147px; z-index:1000; }
+.slider-holder span.right { width:21px; height:130px; position:absolute; right:51px; top:147px; z-index:1000; }
+
+/* Direction Nav */
+.flex-direction-nav li a { width:50px; height:172px; margin:0; display:block; position:absolute; top:150px; cursor:pointer; text-indent:-9999px; z-index:1;transition:margin 0.2s; -moz-transition:margin 0.2s; -webkit-transition:margin 0.2s; -o-transition:margin 0.2s; }
+.flex-direction-nav li a.next { background-position:right 0; right:17px; z-index:30; }
+.flex-direction-nav li a.prev { left:17px; }
+.flex-direction-nav li a.next:hover { margin-right:-6px; }
+.flex-direction-nav li a.prev:hover { margin-left:-6px; }
+.flex-direction-nav li .disabled { opacity:.3; filter:alpha(opacity=30); cursor:default; }
+
+/* Control Nav */
+.flex-control-nav { bottom:22px; z-index:100; height:36px; text-align:center; z-index:100; }
+.flex-control-nav li { margin:0 0 0 4px; display:inline-block; zoom:1; *display:inline; padding-top:10px; }
+.flex-control-nav li:first-child { margin:0; }
+.flex-control-nav li a { width:15px; height:15px; display:block; cursor:pointer; text-indent:-9999px; }
+.flex-control-nav li a:hover { background-position:1px -15px; }
+.flex-control-nav li a.active { background-position:1px -15px; cursor:default; }
