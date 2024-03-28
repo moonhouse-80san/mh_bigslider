@@ -2,8 +2,8 @@
 <widget version="0.2">
 	<title xml:lang="ko">Mh BigSlider</title>
 	<description xml:lang="ko">Mh BigSlider</description>
-	<version>1.1</version>
-	<date>2023-07-05</date>
+	<version>2.0</version>
+	<date>2023-07-13</date>
 
 	<author email_address="mbg1346@naver.com" link="https://moonhouse.co.kr">
 		<name xml:lang="ko">문하우스</name>
@@ -330,23 +330,6 @@
 				<value>N</value>
 			</options>
 		</var>
-		<var id="button_loca">
-			<name xml:lang="ko">　┖  버턴위치</name>
-			<description xml:lang="ko"></description>
-			<type>select</type>
-			<options>
-				<name xml:lang="ko">오른쪽</name>
-				<value>2</value>
-			</options>
-			<options>
-				<name xml:lang="ko">중앙</name>
-				<value></value>
-			</options>
-			<options>
-				<name xml:lang="ko">왼쪽</name>
-				<value>1</value>
-			</options>
-		</var>
 		<var id="extra_var_num">
 			<name>　┖  확장값 번호 / 배너스킨 선택시 사이트 바로가기</name>
 			<type>select</type>
@@ -393,6 +376,28 @@
 			<options><name>sky</name><value>sky</value></options>
 			<options><name>yellow</name><value>yellow</value></options>
 			<options><name>purple</name><value>purple</value></options>
+		</var>
+	</group>
+
+	<group>
+	<title xml:lang="ko">No Img Skin만 적용</title>
+		<var id="widget_type">
+			<name xml:lang="ko">★위젯 형태</name>
+			<type>select</type>
+			<description xml:lang="ko">썸네일과 기타영역의 정렬 형태</description>
+			<options>
+				<name xml:lang="ko">가로 정렬</name>
+				<value></value>
+			</options>
+			<options>
+				<name xml:lang="ko">세로 정렬</name>
+				<value>h</value>
+			</options>
+		</var>
+		<var id="nav_size">
+			<name xml:lang="ko">　┖  좌우 네비 크기</name>
+			<description xml:lang="ko">좌우 네비게이션 이미지의 크기를 지정(기본 0.9)</description>
+			<type>text</type>
 		</var>
 	</group>
 
