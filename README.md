@@ -1,4 +1,4 @@
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://moonhouse.co.kr/files/attach/images/2023/05/19/473ebfdf6d25fdc738f4dc1edcd3e496.jpg)
+![](https://moonhouse.co.kr/files/attach/images/2023/05/19/473ebfdf6d25fdc738f4dc1edcd3e496.jpg)
 
 [ 특징 ]
 
