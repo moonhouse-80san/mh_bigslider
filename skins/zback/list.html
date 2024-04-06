@@ -21,7 +21,7 @@
 							<a  cond="$wi->title == 'Y'"href="{getUrl('','document_srl',$oDocument->document_srl)}">{$oDocument->getTitleText($wi->subject_cut_size)}</a>
 							<div cond="$wi->display_regdate == ''" class="regdate">{$oDocument->getRegdate('F d, Y')}</div>
 							<div cond="$wi->summary == 'Y' && $oDocument->getSummary()" class="summary"><a href="{getUrl('','document_srl',$oDocument->document_srl)}">{$oDocument->getSummary($wi->content_cut_size)}</a></div>
-							<div cond="$oDocument->getExtraEidValue($wi->info_area)" class="summary">{$oDocument->getExtraEidValue($wi->info_area)}</div>
+							<div cond="$oDocument->getExtraEidValue($wi->info_area)" class="summary"><a href="{getUrl('','document_srl',$oDocument->document_srl)}">{$oDocument->getExtraEidValue($wi->info_area)}</a></div>
 							<div cond="!$wi->button == '' && $oDocument->extra_value" class="summary" style="margin-top:20px"><a href="{getUrl('','document_srl',$oDocument->document_srl)}" style="font-weight:bold">{$wi->extra_title} : {$oDocument->extra_value}</a></div>
 						</div>
 
