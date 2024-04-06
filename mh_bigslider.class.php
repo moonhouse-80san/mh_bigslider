@@ -53,6 +53,7 @@
 			$args->tooltip_location = $args->tooltip_location;
 			$args->back_color = isset($args->back_color) ? $args->back_color : 'transparent';
 			$args->speed = isset($args->speed) ? (int)$args->speed : 5000;
+			$args->info_area = isset($args->info_area) ? $args->info_area : 'info';
 
 			// 최근 글 표시 시간
 			$widget_info->duration_new = $duration_new * 60*60;

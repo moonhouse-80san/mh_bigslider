@@ -2,8 +2,8 @@
 <widget version="0.2">
 	<title xml:lang="ko">Mh BigSlider</title>
 	<description xml:lang="ko">Mh BigSlider</description>
-	<version>2.0</version>
-	<date>2023-07-13</date>
+	<version>2.1</version>
+	<date>2024-04-06</date>
 
 	<author email_address="mbg1346@naver.com" link="https://moonhouse.co.kr">
 		<name xml:lang="ko">문하우스</name>
@@ -376,6 +376,11 @@
 			<options><name>sky</name><value>sky</value></options>
 			<options><name>yellow</name><value>yellow</value></options>
 			<options><name>purple</name><value>purple</value></options>
+		</var>
+		<var id="info_area">
+			<name xml:lang="ko">★내용영역 출력 확장변수 ID</name>
+			<type>text</type>
+			<description xml:lang="ko">내영영역안에 출력될 확방변수의 ID(기본 info)</description>
 		</var>
 	</group>
 
