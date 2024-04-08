@@ -55,6 +55,18 @@
 			$args->speed = isset($args->speed) ? (int)$args->speed : 5000;
 			$args->info_area = isset($args->info_area) ? $args->info_area : 'info';
 
+			// 종료 설정
+			$args->sname = isset($args->sname) ? $args->sname : 'start';
+			$args->ename = isset($args->ename) ? $args->ename : 'end';
+			$args->d_day_title = isset($args->d_day_title) ? $args->d_day_title : '';
+			$args->before_title = isset($args->before_title) ? $args->before_title : '';
+			$args->end_title = isset($args->end_title) ? $args->end_title : '종료';
+			$args->ing_title = isset($args->ing_title) ? $args->ing_title : '';
+			$args->approach_title = isset($args->approach_title) ? $args->approach_title : '종료임박';
+			$args->today_title = isset($args->today_title) ? $args->today_title : '오늘종료';
+			$args->a_d = isset($args->a_d) ? $args->a_d : '+1 day';
+			$args->i_d = isset($args->i_d) ? $args->i_d : '-1 days';
+
 			// 최근 글 표시 시간
 			$widget_info->duration_new = $duration_new * 60*60;
 			if(!$args->duration_new) $args->duration_new = 24;

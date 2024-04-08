@@ -406,5 +406,72 @@
 		</var>
 	</group>
 
+	<group>
+		<title xml:lang="ko">D-day 적용</title>
+			<var id="sname">
+				<name xml:lang="ko">★날짜시작 사용자정의 이름</name>
+				<type>text</type>
+				<description xml:lang="ko">날짜시작 확장변수 사용자정의 이름을 기재하세요.(기본 start)</description>
+			</var>
+			<var id="ename">
+				<name xml:lang="ko">날짜종료 사용자정의 이름</name>
+				<type>text</type>
+				<description xml:lang="ko">날짜종료 확장변수 사용자정의 이름을 기재하세요.(기본 end)</description>
+			</var>
+			<var id="before_title">
+				<name xml:lang="ko">　┖ 시작</name>
+				<type>text</type>
+				<description xml:lang="ko">시작전 제목을 적어주세요</description>
+			</var>
+			<var id="end_title">
+				<name xml:lang="ko">　┖ 종료</name>
+				<type>text</type>
+				<description xml:lang="ko">종료 제목을 적어주세요(기본 종료)</description>
+			</var>
+			<var id="ing_title">
+				<name xml:lang="ko">　┖ 진행중</name>
+				<type>text</type>
+				<description xml:lang="ko">진행중 제목을 적어주세요</description>
+			</var>
+			<var id="approach_title">
+				<name xml:lang="ko">　┖ 종료임박</name>
+				<type>text</type>
+				<description xml:lang="ko">종료임박 제목을 적어주세요(기본 종료임박)</description>
+			</var>
+			<var id="today_title">
+				<name xml:lang="ko">　┖ 오늘종료</name>
+				<type>text</type>
+				<description xml:lang="ko">오늘종료 제목을 적어주세요(기본 오늘종료)</description>
+			</var>
+			<var id="a_d">
+				<name xml:lang="ko">　┖ 종료임박 날수</name>
+				<type>text</type>
+				<description xml:lang="ko">종료임박 날 수를 적어주세요(기본 +1 day / 진행중 날 수와 동일 설정)</description>
+			</var>
+			<var id="i_d">
+				<name xml:lang="ko">　┖ 진행중 시작 날수</name>
+				<type>text</type>
+				<description xml:lang="ko">진행중 시작 날수를 적어주세요(기본 -1 days / 종료임박 날 수와 동일 설정)</description>
+			</var>
+			<var id="d_day">
+				<name>★D-Day출력</name>
+				<type>select</type>
+				<description>D-Day를 출력표시합니다.</description>
+				<options>
+					<name>표시하지 않음</name>
+					<value></value>
+				</options>
+				<options>
+					<name>표시</name>
+					<value>Y</value>
+				</options>
+			</var>
+			<var id="d_day_title">
+				<name xml:lang="ko">　┖ D-Day</name>
+				<type>text</type>
+				<description xml:lang="ko">D-Day 제목을 적어주세요</description>
+			</var>
+	</group>
+
 	</extra_vars>
 </widget>

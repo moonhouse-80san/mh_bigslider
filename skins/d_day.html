@@ -1,0 +1,38 @@
+<!--// 종료 확장변수 설정 -->
+{@
+	$now = date('Y-m-d');
+	$date_before = $oDocument->getExtraEidValueHTML($wi->sname);
+	$date = $oDocument->getExtraEidValueHTML($wi->ename);
+	$this_day = date_create($oDocument->getExtraEidValueHTML($wi->ename));
+	$date1 = date("Y-m-d",strtotime($this_day->format("Y-m-d").($wi->i_d)));
+	$datetime = new DateTime($now);
+	$date2 = $datetime->modify($wi->a_d);
+	$w_today = time();// 오늘 날짜 설정
+
+	$w_b_day_text = str_replace('.', '-', $date_before);// 시작 날짜 설정
+	$w_b_day = strtotime($w_b_day_text);
+	$w_b_diff = $w_b_day - $w_today;// 시작날짜와 오늘 날짜 차이 계산
+	$w_b_days = floor($w_b_diff / (60 * 60 * 24))+1;// 초를 일 수로 변환
+
+	$w_d_day_text = str_replace('.', '-', $date);// D-day 날짜 설정
+	$w_d_day = strtotime($w_d_day_text);
+	$w_diff = $w_d_day - $w_today;// D-day와 오늘 날짜 차이 계산
+	$w_days = floor($w_diff / (60 * 60 * 24))+1;// 초를 일 수로 변환
+}
+
+<!--@if($date || $date_before)-->
+	<!--@if($now >= $date_before)-->
+		<!--@if($now > $date)-->
+			<span class="sbtn_mini sbtn-dark" style="margin-right:5px"><i class="fas fa-hourglass-end"></i> {$wi->end_title}</span>
+		<!--@elseif($now == $date)-->
+			<span class="sbtn_mini sbtn-orange" style="margin-right:5px"><i class="fas fa-hourglass-half"></i> {$wi->today_title}<!--@if($wi->d_day =='Y')-->[{$wi->d_day_title} - 0]<!--@end--></span>
+		<!--@elseif($now < $date1)-->
+			<span class="sbtn_mini sbtn-yellow" style="margin-right:5px"><i class="fas fa-spinner fa-pulse"></i> {$wi->ing_title}<!--@if($wi->d_day =='Y')-->[{$wi->d_day_title} - {$w_days}]<!--@end--></span>
+		<!--@elseif($date2)-->
+			<span class="sbtn_mini sbtn-blue" style="margin-right:5px"><i class="fas fa-running"></i> {$wi->approach_title}<!--@if($wi->d_day =='Y')-->[{$wi->d_day_title} - {$w_days}]<!--@end--></span>
+		<!--@end-->
+	<!--@else-->
+		<span class="sbtn_mini sbtn-gray" style="margin-right:5px"><i class="fas fa-running"></i> {$wi->before_title} {$w_b_days}일전</span>
+	<!--@end-->
+<!--@else-->
+<!--@end-->
