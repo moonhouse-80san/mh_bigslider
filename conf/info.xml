@@ -3,7 +3,7 @@
 	<title xml:lang="ko">Mh BigSlider</title>
 	<description xml:lang="ko">Mh BigSlider</description>
 	<version>2.1</version>
-	<date>2024-04-06</date>
+	<date>2024-04-13</date>
 
 	<author email_address="mbg1346@naver.com" link="https://moonhouse.co.kr">
 		<name xml:lang="ko">문하우스</name>
@@ -417,6 +417,11 @@
 				<name xml:lang="ko">날짜종료 사용자정의 이름</name>
 				<type>text</type>
 				<description xml:lang="ko">날짜종료 확장변수 사용자정의 이름을 기재하세요.(기본 end)</description>
+			</var>
+			<var id="period_title">
+				<name xml:lang="ko">　┖ 기간</name>
+				<type>text</type>
+				<description xml:lang="ko">시작 날짜 ~ 끝 날짜 제목을 적어주세요(기본 날짜)</description>
 			</var>
 			<var id="before_title">
 				<name xml:lang="ko">　┖ 시작</name>

@@ -60,6 +60,7 @@
 			$args->ename = isset($args->ename) ? $args->ename : 'end';
 			$args->d_day_title = isset($args->d_day_title) ? $args->d_day_title : '';
 			$args->before_title = isset($args->before_title) ? $args->before_title : '';
+			$args->period_title = isset($args->period_title) ? $args->period_title : '날짜';
 			$args->end_title = isset($args->end_title) ? $args->end_title : '종료';
 			$args->ing_title = isset($args->ing_title) ? $args->ing_title : '';
 			$args->approach_title = isset($args->approach_title) ? $args->approach_title : '종료임박';
