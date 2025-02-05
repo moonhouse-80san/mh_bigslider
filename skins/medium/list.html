@@ -11,7 +11,6 @@
 			<ul class="slides">
 				<!--@foreach($box_list as $key => $val)-->
 					{@ $oDocument = $oDocumentModel->getDocument($val->document_srl)}
-
 					<li>
 						<a cond="$wi->thumd_nails_box == 'Y'" href="{getUrl('','document_srl',$oDocument->document_srl)}" class="alignleft" style="margin:0 15px">
 							<!--@if($oDocument->getThumbnail())-->
@@ -22,6 +21,7 @@
 						</a>
 
 						<div cond="$wi->title_box =='Y'" class="slide-cnt">
+							<span class="sm_icon">{$oDocument->printExtraImages($wi->duration_new* 60*60)}</span>
 							<a  cond="$wi->title == 'Y'"href="{getUrl('','document_srl',$oDocument->document_srl)}">{$oDocument->getTitleText($wi->subject_cut_size)}<include target="../d_day.html" />
 							</a>
 							<div cond="$wi->display_regdate == ''" class="regdate">{$oDocument->getRegdate('F d, Y')}</div>
