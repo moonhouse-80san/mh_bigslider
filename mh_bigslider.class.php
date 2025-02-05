@@ -83,6 +83,13 @@ class mh_bigslider extends WidgetHandler {
 			$oDocument->setAttribute($attribute);
 			$oModuleInfo = $oModuleModel->getModuleInfoByModuleSrl($attribute->module_srl);
 			$oDocument->mid = $oModuleInfo->mid;
+
+			// 확장 변수 출력
+			if (!empty($args->extra_var_num)) {
+				$oDocument->extra_value = $oDocument->getExtraValue($args->extra_var_num);
+				$oDocument->extra_var_num = $args->extra_var_num;
+			}
+
 			$document_list[] = $oDocument;
 		}
 
