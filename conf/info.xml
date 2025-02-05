@@ -2,8 +2,8 @@
 <widget version="0.2">
 	<title xml:lang="ko">Mh BigSlider</title>
 	<description xml:lang="ko">Mh BigSlider</description>
-	<version>2.1</version>
-	<date>2024-04-13</date>
+	<version>3.0</version>
+	<date>2025-02-05</date>
 
 	<author email_address="mbg1346@naver.com" link="https://moonhouse.co.kr">
 		<name xml:lang="ko">문하우스</name>
@@ -421,7 +421,7 @@
 			<var id="period_title">
 				<name xml:lang="ko">　┖ 기간</name>
 				<type>text</type>
-				<description xml:lang="ko">시작 날짜 ~ 끝 날짜 제목을 적어주세요(기본 날짜)</description>
+				<description xml:lang="ko">시작 날짜 ~ 끝 날짜 제목을 적어주세요.(미작성시 기간 출력되지 않음)</description>
 			</var>
 			<var id="before_title">
 				<name xml:lang="ko">　┖ 시작</name>

@@ -3,7 +3,10 @@
 	$now = date('Y-m-d');
 	$date_before = $oDocument->getExtraEidValueHTML($wi->sname);
 	$date = $oDocument->getExtraEidValueHTML($wi->ename);
+	$start_day = date_create($oDocument->getExtraEidValueHTML($wi->sname));
+	$start_date = date("Y m d",strtotime($start_day->format("Y-m-d")));
 	$this_day = date_create($oDocument->getExtraEidValueHTML($wi->ename));
+	$end_date = date("Y m d",strtotime($this_day->format("Y-m-d")));
 	$date1 = date("Y-m-d",strtotime($this_day->format("Y-m-d").($wi->i_d)));
 	$datetime = new DateTime($now);
 	$date2 = $datetime->modify($wi->a_d);
@@ -36,3 +39,8 @@
 	<!--@end-->
 <!--@else-->
 <!--@end-->
+
+<div cond="($oDocument->getExtraEidValue($wi->sname) || $oDocument->getExtraEidValue($wi->ename)) && $wi->period_title" class="summary" style="margin-top:5px; color:#000">
+	<span cond="$wi->period_title">{$wi->period_title} </span><span cond="$oDocument->getExtraEidValue($wi->sname)">{$start_date} ~ </span>
+	<span cond="$oDocument->getExtraEidValue($wi->ename)">{$end_date}</span>
+</div>
