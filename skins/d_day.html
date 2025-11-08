@@ -9,7 +9,7 @@
 	$end_date = date("Y m d",strtotime($this_day->format("Y-m-d")));
 	$date1 = date("Y-m-d",strtotime($this_day->format("Y-m-d").($wi->i_d)));
 	$datetime = new DateTime($now);
-	$date2 = $datetime->modify($wi->a_d);
+	$date2 = $datetime->modify(urldecode($wi->a_d));
 	$w_today = time();// 오늘 날짜 설정
 
 	$w_b_day_text = str_replace('.', '-', $date_before);// 시작 날짜 설정
